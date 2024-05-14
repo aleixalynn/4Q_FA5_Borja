@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nameInput">
+    <button onclick="addContact()">Add</button>
+    <button onclick="removeContact()">Remove</button>
+    <p id = "output"></p>
+
+    <script>
+        var contacts = [];
+
+        function addContact() {
+            var nameInput = document.getElementById('nameInput');
+            var name = contact.value;
+            if (name) {
+                if (contacts.length >= 7) {
+                    contacts.shift(); 
+                }
+                contacts.push(name);
+                document.getElementById("output"),innerHTML = contacts;
+            } else {
+                alert('Please enter a valid name.');
+            }
+        }
+
+        function removeContact() {
+            contact.pop();
+            document.getElementById("output").innerHTML = contact;
+        }
+    </script>
+</body>
+</html>
